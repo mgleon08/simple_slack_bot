@@ -6,6 +6,9 @@ gem 'dotenv'
 gem 'giphy'
 gem 'faraday'
 
+gem 'puma'
+gem 'sinatra'
+
 group :development, :test do
   gem 'foreman'
 end

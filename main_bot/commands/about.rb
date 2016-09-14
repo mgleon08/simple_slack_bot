@@ -1,7 +1,10 @@
 module MainBot
   module Commands
     class About < SlackRubyBot::Commands::Base
-      command 'about' do |client, data, _match|
+      match(/^(?<bot>\w*)$/) do |client, data, _match|
+        client.say(channel: data.channel, text: MainBot::ABOUT, gif: 'about')
+      end
+      match(/^(?<bot>[[:alnum:][:punct:]@<>]*)$/u) do |client, data, _match|
         client.say(channel: data.channel, text: MainBot::ABOUT, gif: 'about')
       end
     end
