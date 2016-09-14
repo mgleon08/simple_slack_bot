@@ -8,6 +8,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     concurrent-ruby (1.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.2.5)
     dotenv (2.1.1)
     eventmachine (1.2.0.1)
     faraday (0.9.2)
@@ -29,6 +32,7 @@ GEM
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
     gli (2.14.0)
+    hashdiff (0.3.0)
     hashie (3.4.4)
     i18n (0.7.0)
     json (2.0.2)
@@ -41,6 +45,22 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.3)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    safe_yaml (1.0.4)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -61,6 +81,11 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    vcr (3.0.1)
+    webmock (1.24.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -75,8 +100,12 @@ DEPENDENCIES
   foreman
   giphy
   puma
+  rack-test
+  rspec
   sinatra
   slack-ruby-bot
+  vcr
+  webmock
 
 BUNDLED WITH
    1.11.2
