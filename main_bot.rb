@@ -1,5 +1,5 @@
 require 'slack-ruby-bot'
 require 'main_bot/version'
-require 'main_bot/commands'
 require 'main_bot/supports'
+require 'main_bot/commands'
 require 'main_bot/bot'
