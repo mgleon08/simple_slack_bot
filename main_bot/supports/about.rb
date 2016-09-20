@@ -1,5 +1,5 @@
 module MainBot
-  ABOUT = <<-ABOUT
+  ABOUT = <<-ABOUT.freeze
     This is ABOUT.
   ABOUT
 end

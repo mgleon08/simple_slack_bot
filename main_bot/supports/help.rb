@@ -1,5 +1,5 @@
 module MainBot
-  HELP = <<-HELP
+  HELP = <<-HELP.freeze
     This is HELP.
   HELP
 end

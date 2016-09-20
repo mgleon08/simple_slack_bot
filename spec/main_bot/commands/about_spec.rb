@@ -5,6 +5,6 @@ describe MainBot::Commands::About do
     MainBot::Bot.instance
   end
   it 'MainBot' do
-    expect(message: "#{SlackRubyBot.config.user}").to respond_with_slack_message(MainBot::ABOUT)
+    expect(message: SlackRubyBot.config.user.to_s).to respond_with_slack_message(MainBot::ABOUT)
   end
 end
