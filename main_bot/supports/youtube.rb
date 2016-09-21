@@ -9,6 +9,8 @@ module MainBot
   module Supports
     module Youtube
       def search(query)
+        raise 'You must configure the YOUTUBE_API_TOKEN environment variable' unless ENV['YOUTUBE_API_TOKEN']
+
         conn = Faraday.new(url: 'https://www.googleapis.com/youtube/v3/search')
 
         respones = conn.get do |req|

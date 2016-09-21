@@ -4,7 +4,6 @@ module MainBot
       extend MainBot::Supports::Youtube
       match(/^(?<bot>[[:alnum:][:punct:]@<>]*) youtube (?<query>.*)$/i) do |client, data, match|
         begin
-          raise 'You must configure the YOUTUBE_API_TOKEN environment variable' unless ENV['YOUTUBE_API_TOKEN']
           youtube_url = search(match[:query])
           client.say(channel: data.channel, text: "#{youtube_url}")
         rescue => e
