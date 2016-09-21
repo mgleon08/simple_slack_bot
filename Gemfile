@@ -3,8 +3,7 @@ source 'http://rubygems.org'
 gem 'slack-ruby-bot'
 gem 'faye-websocket'
 gem 'dotenv'
-gem 'giphy'
-gem 'faraday'
+gem 'giphy', require: false if ENV.key?('WITH_GIPHY')
 
 gem 'puma'
 gem 'sinatra'
