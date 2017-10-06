@@ -1,4 +1,4 @@
-#Simple_Slack_Bot
+# Simple_Slack_Bot
 
 This is easy way to implement your first slack bot in ruby use [slack-ruby-bot](https://github.com/slack-ruby/slack-ruby-bot) gem.
 
@@ -8,18 +8,18 @@ This is easy way to implement your first slack bot in ruby use [slack-ruby-bot](
 $ git clone git@github.com:mgleon08/simple_slack_bot.git
 ```
 
-##Setup
+## Setup
 
-###slack bot token
+### slack bot token
 Registering the bot to get `SLACK_API_TOKEN` [https://my.slack.com/services/new/bot](https://my.slack.com/services/new/bot)
 
 
-###youtube token
+### youtube token
 
 Get `YOUTUBE_API_TOKEN` from [https://console.developers.google.com
 ](https://console.developers.google.com)
 
-###configure
+### configure
 copy `.env_example` to `.env`
 
 ```
@@ -27,17 +27,17 @@ SLACK_API_TOKEN=[copy you apply for slack token]
 YOUTUBE_API_TOKEN=[copy you apply for youtube token]
 ```
 
-###giphy
+### giphy
 
 If you want to show gif, you can add `WITH_GIPHY=` in `.env`.
 
-##Started
+## Started
 
 ```
 foreman start
 ```
 
-###default command in slack
+### default command in slack
 
 ```
 Commands:
@@ -46,7 +46,7 @@ Commands:
   @<bot> youtube <query> - Searches YouTube for the query and returns the video embed link.
 ```
 
-##Customize
+## Customize
 
 * `simple_slack_bot/main_bot/commands/[yourfile]` Bot trigged word
 
@@ -77,33 +77,33 @@ end
 
 It have three way to match word `match`, `comman`, `scan`
 
-##Deploy
+## Deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com)
 
 ```ruby
-#create new heroku project
+# create new heroku project
 heroku create
 
-#push heroku
+# push heroku
 git push heroku master
 
-#env config setting
+# env config setting
 heroku config:add SLACK_API_TOKEN=[YOUR_ SLACK_API_TOKEN]
 
-#env config remove
+# env config remove
 heroku config:remove SLACK_API_TOKEN
 
-#log
+# log
 heroku logs --tail
 
-#scale
+# scale
 heroku ps:scale web=2
 ```
 
 [uptimerobot](http://uptimerobot.com/) To prevent dormancy
 
-##More information
+## More information
 
 See below to get more information
 
